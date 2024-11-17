@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="flex-auto relative w-full h-screen justify-normal">
             <div class="flex-auto relative w-full h-screen bg-orange-400/80 bg-blend-multiply bg-center bg-cover bg-no-repeat " style="background-image: url('Ovik\ gallery.jpg');">
                 <nav class="flex items-center">
                     <ul class="flex-1 text-center pt-3 text-2xl font-semibold font-serif">
@@ -17,24 +17,55 @@
                         <li class="list-none inline-block px-3"><a href="#" class="no-underline text-white px-1  hover:text-orange-200">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="text-white mt-40 text-center font-light font-serif  ">
+                    <h1 class="text-7xl">Welcome To The Gallery</h1>
+                    <p class="pt-4">P.S. Click On The Pictures)) </p>
+                </div>
             </div>
             <main>
                 <div class="p-5 md:p-10">
-                    <div class="columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 xl:columns-4 [$>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
-                    <img src="ovik 2.jpg" alt="">
-                    <img src="ovik3.jpeg" alt="">
-                    <img src="ovik4.jpeg" alt="">
-                    <img src="ovik5.jpeg" alt="">
-                    <img src="ovik6.jpeg" alt="">
-                    <img src="ovik7.jpeg" alt="">
-                    <img src="ovik8.jpeg" alt="">
-                    <img src="ovik9.jpeg" alt="">
-                    <img src="ovik10.jpeg" alt="">
-                    <img src="ovik11.jpeg" alt="">
-                    <img src="ovik12.jpeg" alt="">
-                    <img src="ovik13.jpeg" alt="">
-                    </div>
+                        <div class="columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 xl:columns-4 [$>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8 ">
+                    <img onclick="playAudio(audio);" class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik 2.jpg" alt="">
+                    <img onclick="playAudio(audio4);" class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik3.jpeg" alt="">
+                    <img class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik4.jpeg" alt="">
+                    <img onclick="playAudio(audio1);" class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik5.jpeg" alt="">
+                    <img onclick="playAudio(audio2);" class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik6.jpeg" alt="">
+                    <img onclick="playAudio(audio6);" class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik7.jpeg" alt="">
+                    <img onclick="playAudio(audio3);" class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik8.jpeg" alt="">
+                    <img class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik9.jpeg" alt="">
+                    <img class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik10.jpeg" alt="">
+                    <img onclick="playAudio(audio4);" class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik11.jpeg" alt="">
+                    <img onclick="playAudio(audio4);" class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik12.jpeg" alt="">
+                    <img onclick="playAudio(audio7);" class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik13.jpeg" alt="">
+                    <img onclick="playAudio(audio5);" class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik14.jpg" alt="">
+                    <img class="transition duration-500 hover:scale-110 shadow-none  cursor-pointer hover:shadow-2xl hover:shadow-black" src="ovik15.jpg" alt="">
+                    <script type="text/javascript">
+                        const audio = new Audio();
+                        audio.src = "./musica-mexican.mp3";
+                        const audio1 = new Audio();
+                        audio1.src = "./meowrgh.mp3";
+                        const audio2 = new Audio();
+                        audio2.src = "./sad-meow-song.mp3";
+                        const audio3 = new Audio();
+                        audio3.src = "./party.mp3";
+                        const audio4 = new Audio();
+                        audio4.src = "./snore.mp3";
+                        const audio5 = new Audio();
+                        audio5.src = "./pidor.mp3";
+                        const audio6 = new Audio();
+                        audio6.src = "./laugh.mp3";
+                        const audio7 = new Audio();
+                        audio7.src = "./bu.mp3";
+
+                        function playAudio(audio) {
+                            audio.currentTime = 0; // Сброс на начало
+                            audio.play();
+                        }
+                    </script>
+                    
+                        </div>
                 </div>
+                
             </main>
 </body>
 </html>
